@@ -2,12 +2,11 @@ import { Module } from '@nestjs/common';
 
 import { AppController } from './app.controller';
 
-import { DepositModule } from './deposit/deposit.module';
-import { WithdrawModule } from './withdraw/withdraw.module';
 import { AccountModule } from './account/account.module';
+import { BullBoardsModule } from './bull-board/bull-board.module';
 
 @Module({
-  imports: [DepositModule, WithdrawModule, AccountModule],
+  imports: [AccountModule, BullBoardsModule],
   controllers: [AppController],
   providers: [],
 })
